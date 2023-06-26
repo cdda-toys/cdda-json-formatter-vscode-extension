@@ -1,0 +1,35 @@
+name: Publish
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  build:
+    name: Publish
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 'lts/*'
+
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - run: npm install
+
+#    - run: xvfb-run -a npm test
+#      if: runner.os == 'Linux'
+
+#    - run: npm test
+#      if: runner.os != 'Linux'
+  
+    - run: npm version --git-tag-version false ${{ github.event.release.tag_name }}
+
+    - name: Publish
+      run: npm run deploy
+      env:
+        VSCE_PAT: ${{ secrets.VSCE_PAT }}
