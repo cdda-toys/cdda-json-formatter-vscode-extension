@@ -14,6 +14,10 @@ If using non-default overrides you'll have to set this formatter manually, e.g. 
 
 Restarting VS Code should usually resolve any temporary issues.
 
+Result should look roughly so (save hotkey or format document triggers the formatter):
+
+https://github.com/cdda-toys/cdda-json-formatter-vscode-extension/assets/6560075/e9952dcc-982d-44fe-8208-41cf8ae272b3
+
 ## Compiling
 
 To compile or debug dev containers can be used, a guide on how to get started with dev containers [can be found in VS Code docs](https://code.visualstudio.com/docs/devcontainers/containers). For a short pick me up guide: install "Docker Desktop for [Your OS]", install the Dev Containers extension in VS and you're good to go.
