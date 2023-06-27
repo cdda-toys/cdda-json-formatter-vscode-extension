@@ -1,32 +1,24 @@
 # Cataclysm DDA JSON Formatter
 
-This repository contains the source for a VS Code extension.
+This is an extension for VS Code, when enabled this will  format json files according to the JSON style of data files for [Cataclysm DDA](https://github.com/CleverRaven/Cataclysm-DDA) project.
 
-The extension will format json files according to the format expected by data files of
-[Cataclysm DDA](https://github.com/CleverRaven/Cataclysm-DDA) project.
+## Installation
+
+See "Installation" section at the [Visual Studio Marketplace page](https://marketplace.visualstudio.com/items?itemName=cdda-toys.cdda-json-formatter).
 
 ## Using
 
-When using default VS Code configuration enabling the extension will set this formatter as the default for JSON files and enable format-on-save feature. Saving a JSON file or executing a Format Document command will format current file to the JSON format required for Cataclysm DDA project's data files.
+When using default VS Code configuration this extension will be plug and play; enabling the extension will default to this formatter for JSON files and enable format-on-save feature. Saving a JSON file or executing a Format Document command will format current file to the JSON format required for Cataclysm DDA project's data files.
 
-If using non-default overrides you'll have to set this formatter manually, e.g. via `editor.defaultFormatter` setting in user/workspace/folder overrides.
+If using non-default overrides you'll have to set this formatter manually, e.g. via `editor.defaultFormatter` setting in user/workspace/folder settings.
 
-## Installing
-
-See "Installation" at the [Visual Studio Marketplace page](https://marketplace.visualstudio.com/items?itemName=cdda-toys.cdda-json-formatter).
-
-## Configuration
-
-Extension has no settings as this extension aims to be as plug and play as possible.
-
-If it doesn't work make sure it's configured as the formatter for JSON files:
-* On default settings then this extension will work out of the box - if it's enabled then disables the default JSON linter and sets itself as the default.
-
-* If there are overrides for JSON formatting you'll have to set it as the formatter manually.
+Restarting VS Code should usually resolve any temporary issues.
 
 ## Compiling
 
-Clone the repository, run `npm install`, open the folder in VS Code and press F5; this should be enough to get Extension Host debugging session running.
+To compile or debug dev containers can be used, a guide on how to get started with dev containers [can be found in VS Code docs](https://code.visualstudio.com/docs/devcontainers/containers). For a short pick me up guide: install "Docker Desktop for [Your OS]", install the Dev Containers extension in VS and you're good to go.
+
+Once VS Code is set up with dev containers you can clone the repository and open the folder in VS Code. A window should popup offering to "Reopen in container", confirm; once it finishes setting up the container (this also runs `npm install` inside the container), you can press F5; another VS Code instance will pop up that'll have the extension running under the Extension Host debugger.
 
 An npm package in dependencies handles the formatting, it has the C++ formatter parts from Cataclysm-DDA compiled to javascript with emscripten:
 
