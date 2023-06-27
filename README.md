@@ -4,7 +4,9 @@ This is an extension for VS Code, when enabled this will  format json files acco
 
 ## Installation
 
-See "Installation" section at the [Visual Studio Marketplace page](https://marketplace.visualstudio.com/items?itemName=cdda-toys.cdda-json-formatter).
+One of:
+* "Installation" section at the [Visual Studio Marketplace page](https://marketplace.visualstudio.com/items?itemName=cdda-toys.cdda-json-formatter).
+* [Download a `.vsix` file](https://open-vsx.org/extension/cdda-toys/cdda-json-formatter) hosted on Open VSX and install manually
 
 ## Using
 
@@ -14,7 +16,9 @@ If using non-default overrides you'll have to set this formatter manually, e.g. 
 
 Restarting VS Code should usually resolve any temporary issues.
 
-Result should look roughly so (save hotkey or format document triggers the formatter):
+## Demo
+
+Save file hotkey or `Format Document` triggers the formatter:
 
 https://github.com/cdda-toys/cdda-json-formatter-vscode-extension/assets/6560075/e9952dcc-982d-44fe-8208-41cf8ae272b3
 
