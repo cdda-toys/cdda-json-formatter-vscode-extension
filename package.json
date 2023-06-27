@@ -26,7 +26,7 @@
     "configurationDefaults": {
       "json.format.enable": false,
       "[json]": {
-        "editor.defaultFormatter": "cdda-json-formatter",
+        "editor.defaultFormatter": "cdda-toys.cdda-json-formatter",
         "editor.formatOnSave": true,
         "editor.formatOnSaveMode": "file"
       }
