@@ -29,7 +29,10 @@ jobs:
   
     - run: npm version --git-tag-version false ${{ github.event.release.tag_name }}
 
-    - name: Publish
-      run: npm run deploy
+    - name: Publish to VS Marketplace
+      run: npm run deploy-to-vs-marketplace
       env:
         VSCE_PAT: ${{ secrets.VSCE_PAT }}
+
+    - name: Publish to Open VSX
+      run: npm run deploy-to-open-vsx -- -p ${{ secrets.OPEN_VSX_PAT }}

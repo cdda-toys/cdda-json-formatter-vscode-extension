@@ -41,7 +41,8 @@
     "package-web": "webpack --mode production --devtool hidden-source-map",
     "lint": "eslint src --ext ts",
     "run-in-browser": "vscode-test-web --browserType=chromium --extensionDevelopmentPath=. .",
-    "deploy": "vsce publish"
+    "deploy-to-vs-marketplace": "vsce publish",
+    "deploy-to-open-vsx": "npx ovsx publish"
   },
   "devDependencies": {
     "@types/vscode": "^1.79.1",
