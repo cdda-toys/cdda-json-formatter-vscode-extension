@@ -5,21 +5,11 @@
   "publisher": "cdda-toys",
   "version": "0.0.1",
   "license" : "SEE LICENSE IN LICENSE.txt",
-  "engines": {
-    "vscode": "^1.79.0"
-  },
-  "categories": [
-    "Formatters"
-  ],
-  "keywords": [
-    "cataclysm",
-    "cdda",
-    "formatter",
-    "style"
-  ],
-  "activationEvents": [
-    "onLanguage:json"
-  ],
+  "engines": { "vscode": "^1.79.0" },
+  "categories": [ "Formatters" ],
+  "keywords": [ "cataclysm", "cdda", "formatter", "style" ],
+  "activationEvents": [ "onLanguage:json" ],
+  "capabilities": { "untrustedWorkspaces": { "supported": true } },
   "repository": "https://github.com/cdda-toys/cdda-json-formatter-vscode-extension",
   "browser": "./dist/web/extension.js",
   "contributes": {
