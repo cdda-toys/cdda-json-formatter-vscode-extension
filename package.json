@@ -10,6 +10,7 @@
   "keywords": [ "cataclysm", "cdda", "formatter", "style" ],
   "activationEvents": [ "onLanguage:json" ],
   "capabilities": { "untrustedWorkspaces": { "supported": true } },
+  "extensionKind": [ "workspace" ],
   "repository": "https://github.com/cdda-toys/cdda-json-formatter-vscode-extension",
   "browser": "./dist/web/extension.js",
   "contributes": {
