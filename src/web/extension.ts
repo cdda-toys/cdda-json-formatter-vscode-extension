@@ -11,12 +11,12 @@ export class CataJsonFormattingProvider implements
 
 	outputChannel: vscode.OutputChannel;
 	formatterModule: FormatterModule;
-	formatterApply: (input: string) => string;
+	formatterApply: (input: string, colorize: number) => string;
 
 	constructor(outputChannel: vscode.OutputChannel, formatterModule: FormatterModule) {
 		this.outputChannel = outputChannel;
 		this.formatterModule = formatterModule;
-		this.formatterApply = formatterModule.cwrap("json_format", "string", ["string"]);
+		this.formatterApply = formatterModule.cwrap("json_format", "string", ["string", "number"]);
 	}
 
 	public provideDocumentFormattingEdits(
@@ -24,7 +24,11 @@ export class CataJsonFormattingProvider implements
 		options: vscode.FormattingOptions,
 		token: vscode.CancellationToken): vscode.ProviderResult<vscode.TextEdit[]> {
 
-		let formatted = this.formatterApply(document.getText());
+		// possible values for this are in the json_error_output_colors_t enum in CDDA's json.h
+		// eslint-disable-next-line @typescript-eslint/naming-convention
+		const json_error_output_colors_t_no_colors = 1;
+
+		let formatted = this.formatterApply(document.getText(), json_error_output_colors_t_no_colors);
 
 		if (formatted === "") {
 			return [];
